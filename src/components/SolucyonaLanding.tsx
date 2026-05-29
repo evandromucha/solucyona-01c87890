@@ -39,7 +39,7 @@ function Logo({ light = false }: { light?: boolean }) {
   return (
     <a href="#inicio" className="group flex items-baseline gap-1.5" aria-label="Solucyona Smart Solutions">
       <span
-        className={`font-display text-2xl font-normal tracking-tight ${
+        className={`font-display text-2xl font-normal tracking-tight font-mono ${
           light ? "text-ink-foreground" : "text-foreground"
         }`}
       >
@@ -148,7 +148,7 @@ function Hero() {
       <div className="mx-auto max-w-[1400px] px-6 pb-24 pt-24 md:pt-32 lg:px-12 lg:pb-32">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-9">
-            <Eyebrow light>Solucyona / Consultoria em Tecnologia</Eyebrow>
+            <Eyebrow light>OPERAÇÃO EM LISBOA - PORTUGAL</Eyebrow>
             <h1 className="mt-8 font-display text-[44px] font-normal leading-[1.02] tracking-[-0.02em] text-balance sm:text-6xl md:text-7xl lg:text-[88px]">
               Soluções inteligentes para{" "}
               <span className="italic text-primary">infraestrutura</span>, tecnologia e{" "}
@@ -184,7 +184,7 @@ function Hero() {
         {/* Bottom stats strip */}
         <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-4">
           {[
-            { n: "2004", l: "Fundada no Brasil" },
+            { n: "2004", l: "FUNDADA EM SÃO PAULO - BRASIL" },
             { n: "2016—2025", l: "Operação em Portugal" },
             { n: "20+", l: "Anos de experiência" },
             { n: "100%", l: "Foco em resultados" },
@@ -340,8 +340,8 @@ const services = [
   {
     n: "05",
     title: "Gestão de Projetos",
-    lead: "Projetos conduzidos com método, governança e foco em entrega.",
-    items: ["Planejamento", "PMBOK", "Governança", "Controle", "Transformação digital"],
+    lead: "Projetos conduzidos com método, governança e foco em entrega de valor.",
+    items: ["PROJECT MANAGEMENT PROFESSIONALS | PMP® | PMBOK® 8TH ALIGNED", "PLANEJAMENTO", "Governança", "Controle", "Transformação digital"],
   },
 ];
 
