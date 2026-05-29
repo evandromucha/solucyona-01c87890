@@ -33,15 +33,16 @@
   --color-ink: var(--ink);
   --color-ink-foreground: var(--ink-foreground);
 
-  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-display: "Instrument Serif", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-  --shadow-glow: 0 20px 60px -20px color-mix(in oklab, var(--primary) 45%, transparent);
-  --shadow-card: 0 8px 30px -12px color-mix(in oklab, var(--ink) 18%, transparent);
+  --shadow-glow: 0 30px 80px -30px color-mix(in oklab, var(--primary) 35%, transparent);
+  --shadow-card: 0 1px 0 0 var(--border);
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.25rem;
 
   /* Brand */
   --background: oklch(1 0 0);
