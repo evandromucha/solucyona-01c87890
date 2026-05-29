@@ -9,8 +9,15 @@ import {
   Linkedin,
   Phone,
   Plus,
+  Network,
+  Cpu,
+  Cable,
+  Zap,
+  GraduationCap,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoMark from "@/assets/solucyona-logo.png";
+
 
 const WHATSAPP_URL =
   "https://wa.me/5511994393807?text=" +
@@ -37,25 +44,29 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <a href="#inicio" className="group flex items-baseline gap-1.5" aria-label="Solucyona Smart Solutions">
-      <span
-        className={`font-display text-2xl font-normal tracking-tight font-mono ${
-          light ? "text-ink-foreground" : "text-foreground"
-        }`}
-      >
-        Solucyona
-      </span>
-      <span className="text-primary">.</span>
-      <span
-        className={`hidden font-mono text-[10px] uppercase tracking-[0.2em] sm:inline ${
-          light ? "text-ink-foreground/50" : "text-foreground/50"
-        }`}
-      >
-        Smart Solutions
+    <a href="#inicio" className="group flex items-center gap-3" aria-label="Solucyona Smart Solutions">
+      <img src={logoMark} alt="" width={36} height={36} className="h-9 w-9 shrink-0" />
+      <span className="flex items-baseline gap-1.5">
+        <span
+          className={`font-display text-2xl font-normal tracking-tight font-mono ${
+            light ? "text-ink-foreground" : "text-foreground"
+          }`}
+        >
+          Solucyona
+        </span>
+        <span className="text-primary">.</span>
+        <span
+          className={`hidden font-mono text-[10px] uppercase tracking-[0.2em] sm:inline ${
+            light ? "text-ink-foreground/50" : "text-foreground/50"
+          }`}
+        >
+          Smart Solutions
+        </span>
       </span>
     </a>
   );
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* Header                                                                     */
@@ -312,91 +323,234 @@ function Differentiators() {
 /* Services                                                                   */
 /* -------------------------------------------------------------------------- */
 
-const services = [
+const pmServices = [
+  "Concepção e estruturação de projetos",
+  "Planejamento estratégico",
+  "Gestão de cronogramas",
+  "Gestão de custos",
+  "Gestão de riscos",
+  "Gestão de stakeholders",
+  "Governança",
+  "PMO",
+  "Transformação digital",
+  "Entregas incrementais e finais",
+  "Monitoramento e controle",
+  "Encerramento e lições aprendidas",
+];
+
+const specializations = [
   {
-    n: "01",
-    title: "Infraestrutura de Redes",
-    lead: "Conectividade corporativa estável, segura e bem documentada.",
-    items: ["Cabeamento estruturado", "Redes corporativas", "Wi-Fi empresarial", "Organização e documentação"],
-  },
-  {
-    n: "02",
-    title: "Infraestrutura Elétrica",
-    lead: "Base elétrica adequada para ambientes técnicos e operacionais.",
-    items: ["Instalações de baixa tensão", "Organização técnica", "Adequação de ambientes"],
-  },
-  {
-    n: "03",
+    icon: Cpu,
     title: "Tecnologia da Informação",
-    lead: "Suporte, administração e consultoria que sustentam a operação.",
-    items: ["Suporte técnico", "Administração de sistemas", "Consultoria em TI", "Segurança da informação"],
+    text: "Planejamento, implantação, modernização e sustentação de ambientes tecnológicos corporativos.",
+    items: [
+      "Segurança da Informação",
+      "Cibersegurança",
+      "Consultoria em TI",
+      "Administração de Sistemas",
+      "Infraestrutura tecnológica",
+      "Suporte técnico especializado",
+    ],
   },
   {
-    n: "04",
-    title: "Treinamentos",
-    lead: "Capacitação das pessoas para extrair valor real da tecnologia.",
-    items: ["Literacia digital", "Capacitação corporativa", "Boas práticas de TI"],
+    icon: Network,
+    title: "Automação",
+    text: "Projetos voltados à otimização de operações, produtividade e integração de processos.",
+    items: [
+      "Automação Industrial",
+      "Automação Comercial",
+      "Automação Residencial",
+      "Automação Digital",
+      "Automação de Processos",
+    ],
   },
   {
-    n: "05",
-    title: "Gestão de Projetos",
-    lead: "Projetos conduzidos com método, governança e foco em entrega de valor.",
-    items: ["PROJECT MANAGEMENT PROFESSIONALS | PMP® | PMBOK® 8TH ALIGNED", "PLANEJAMENTO", "Governança", "Controle", "Transformação digital"],
+    icon: Cable,
+    title: "Infraestrutura de Redes",
+    text: "Projetos para conectividade segura, estável e escalável.",
+    items: [
+      "Redes Corporativas",
+      "Cabeamento Estruturado",
+      "Wi-Fi Empresarial",
+      "Wi-Fi Residencial",
+      "Organização Técnica",
+      "Documentação de Redes",
+    ],
+  },
+  {
+    icon: Zap,
+    title: "Infraestrutura Elétrica",
+    text: "Projetos de adequação e suporte para ambientes tecnológicos e corporativos.",
+    items: [
+      "Instalações de Baixa Tensão",
+      "Organização Técnica",
+      "Adequação de Ambientes",
+      "Diagnóstico e Solução de Problemas",
+      "Infraestrutura de suporte à tecnologia",
+    ],
+  },
+  {
+    icon: GraduationCap,
+    title: "Treinamentos e Capacitação",
+    text: "Projetos de desenvolvimento de competências para equipes e organizações.",
+    items: [
+      "Capacitação Corporativa",
+      "Boas Práticas em TI",
+      "Literacia Digital",
+      "Segurança da Informação",
+      "Conscientização de Usuários",
+      "Treinamentos Personalizados",
+    ],
   },
 ];
 
 function Services() {
   return (
     <section id="servicos" className="border-b border-border bg-background">
+      {/* Header */}
       <div className="mx-auto max-w-[1400px] px-6 pt-28 lg:px-12 lg:pt-36">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <Eyebrow>03 / Serviços</Eyebrow>
             <h2 className="mt-6 font-display text-4xl font-normal leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Um portfólio integrado de capacidades.
+              Gestão de Projetos que transforma{" "}
+              <span className="italic text-primary">ideias em resultados</span>.
             </h2>
           </div>
-          <p className="text-sm leading-relaxed text-foreground/70 lg:col-span-4 lg:col-start-9">
-            Da camada física à camada de gestão — entregamos cada disciplina com
-            profundidade e a articulamos em soluções coerentes.
-          </p>
+          <div className="space-y-4 text-sm leading-relaxed text-foreground/70 lg:col-span-5 lg:col-start-8">
+            <p>
+              Na Solucyona, nosso principal serviço é a <span className="font-medium text-foreground">Gestão de Projetos</span>,
+              conduzindo iniciativas desde a concepção da ideia até a entrega final,
+              garantindo alinhamento estratégico, controle, qualidade e geração de valor para o negócio.
+            </p>
+            <p>
+              Atuamos com abordagens <span className="font-medium text-foreground">preditivas, híbridas ou ágeis</span>,
+              selecionadas conforme as características de cada projeto, conduzidos por profissionais
+              com certificações reconhecidas pelo <span className="font-medium text-foreground">Project Management Institute (PMI)</span>.
+            </p>
+          </div>
         </div>
       </div>
 
+      {/* Main card – Gestão de Projetos */}
       <div className="mx-auto mt-20 max-w-[1400px] px-6 lg:px-12">
-        <div className="border-t border-border">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="group grid items-start gap-6 border-b border-border py-10 transition-colors hover:bg-muted/60 lg:grid-cols-12 lg:gap-10 lg:py-14"
-            >
-              <div className="flex items-baseline gap-6 lg:col-span-5">
-                <span className="font-mono text-xs text-primary">{s.n}</span>
-                <h3 className="font-display text-3xl font-normal leading-[1.05] tracking-tight transition-colors group-hover:text-primary sm:text-4xl lg:text-5xl">
-                  {s.title}
-                </h3>
-              </div>
-              <p className="text-base leading-relaxed text-foreground/75 lg:col-span-4">
-                {s.lead}
+        <article className="relative overflow-hidden border border-ink bg-ink text-ink-foreground">
+          <div className="absolute right-0 top-0 h-1 w-1/3 bg-gradient-brand" />
+          <div className="grid gap-12 p-8 sm:p-12 lg:grid-cols-12 lg:gap-16 lg:p-16">
+            <div className="lg:col-span-5">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
+                Serviço Principal
+              </span>
+              <h3 className="mt-6 font-display text-4xl font-normal leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
+                Gestão de <span className="italic text-primary">Projetos</span>
+              </h3>
+              <p className="mt-6 text-base leading-relaxed text-ink-foreground/75 lg:text-[17px]">
+                Transformamos ideias em resultados por meio de planejamento, execução,
+                monitoramento e controle de projetos, utilizando metodologias preditivas,
+                híbridas e ágeis.
               </p>
-              <ul className="space-y-2 lg:col-span-3">
-                {s.items.map((i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-foreground/70"
-                  >
-                    <span className="h-px w-3 bg-primary" />
-                    {i}
+              <div className="mt-10 border-l-2 border-primary pl-5">
+                <p className="font-display text-xl italic leading-snug text-ink-foreground sm:text-2xl">
+                  "Projetos conduzidos com base nas melhores práticas do PMI e do PMBOK."
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-foreground/50">
+                Serviços incluídos
+              </span>
+              <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                {pmServices.map((s, i) => (
+                  <li key={s} className="flex items-baseline gap-3 border-b border-ink-foreground/10 pb-3">
+                    <span className="font-mono text-[10px] text-primary">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-sm text-ink-foreground/85">{s}</span>
                   </li>
                 ))}
               </ul>
-            </article>
-          ))}
+            </div>
+          </div>
+        </article>
+      </div>
+
+      {/* Specialization areas */}
+      <div className="mx-auto mt-28 max-w-[1400px] px-6 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <Eyebrow>04 / Áreas de Especialização</Eyebrow>
+            <h2 className="mt-6 font-display text-3xl font-normal leading-[1.05] tracking-tight text-balance sm:text-4xl lg:text-5xl">
+              Disciplinas técnicas que sustentam cada projeto.
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-foreground/70 lg:col-span-4 lg:col-start-9">
+            Profundidade técnica em cinco frentes, articuladas sob a mesma gestão e governança.
+          </p>
+        </div>
+
+        <div className="mt-14 grid border-t border-border md:grid-cols-2 lg:grid-cols-3">
+          {specializations.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <article
+                key={s.title}
+                className="group flex flex-col gap-6 border-b border-border bg-background p-8 transition-colors hover:bg-ink hover:text-ink-foreground lg:p-10 md:[&:nth-child(2n+1)]:border-r lg:[&:nth-child(2n+1)]:border-r-0 lg:[&:not(:nth-child(3n))]:border-r"
+              >
+                <div className="flex items-start justify-between">
+                  <Icon className="h-7 w-7 text-primary" strokeWidth={1.4} />
+                  <span className="font-mono text-xs text-foreground/40 transition-colors group-hover:text-ink-foreground/60">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="font-display text-2xl font-normal leading-tight tracking-tight">
+                  {s.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/70 transition-colors group-hover:text-ink-foreground/75">
+                  {s.text}
+                </p>
+                <ul className="mt-auto space-y-1.5 border-t border-border pt-5 transition-colors group-hover:border-ink-foreground/15">
+                  {s.items.map((it) => (
+                    <li
+                      key={it}
+                      className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-foreground/65 transition-colors group-hover:text-ink-foreground/70"
+                    >
+                      <span className="h-px w-3 bg-primary" />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
+
+          {/* Final CTA card filling the grid */}
+          <article className="flex flex-col justify-between gap-8 border-b border-border bg-primary p-8 text-ink lg:p-10">
+            <div>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
+                Chamada Final
+              </span>
+              <p className="mt-6 font-display text-2xl font-normal leading-snug tracking-tight sm:text-[28px]">
+                Independentemente do segmento, nosso foco é sempre o mesmo: planejar,
+                executar e entregar projetos que gerem{" "}
+                <span className="italic">resultados concretos</span>.
+              </p>
+            </div>
+            <a
+              href="#contato"
+              className="inline-flex items-center justify-between gap-3 border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink/90"
+            >
+              Vamos conversar sobre seu projeto
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </article>
         </div>
       </div>
+
+      <div className="pb-28 lg:pb-36" />
     </section>
   );
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* Process                                                                    */
