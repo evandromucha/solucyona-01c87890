@@ -160,7 +160,7 @@ function Hero() {
       <div className="mx-auto max-w-[1400px] px-6 pb-24 pt-24 md:pt-32 lg:px-12 lg:pb-32">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-9">
-            <Eyebrow light>OPERAÇÃO EM LISBOA - PORTUGAL</Eyebrow>
+            <Eyebrow light>CONSULTORIA EM TECNOLOGIA E GESTÃO DE PROJETOS</Eyebrow>
             <h1 className="mt-8 font-display text-[44px] font-normal leading-[1.02] tracking-[-0.02em] text-balance sm:text-6xl md:text-7xl lg:text-[88px]">
               Soluções inteligentes para{" "}
               <span className="italic text-primary">infraestrutura</span>, tecnologia e{" "}
