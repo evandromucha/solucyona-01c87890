@@ -361,12 +361,13 @@ const specializations = [
     title: "Automação",
     text: "Projetos voltados à otimização de operações, produtividade e integração de processos.",
     items: [
-      "Automação Industrial",
-      "Automação Comercial",
-      "Automação Residencial",
-      "Automação Digital",
-      "Automação de Processos",
+      "Industrial",
+      "Comercial",
+      "Residencial",
+      "Digital",
+      "Processos",
     ],
+
   },
   {
     icon: Cable,
