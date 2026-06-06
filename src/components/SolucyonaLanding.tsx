@@ -18,6 +18,9 @@ import {
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
+import pmpBadge from "@/assets/pmp-badge.png.asset.json";
+import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+
 
 
 const WHATSAPP_URL =
