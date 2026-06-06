@@ -18,6 +18,9 @@ import {
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
+import pmpBadge from "@/assets/pmp-badge.png.asset.json";
+import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+
 
 
 const WHATSAPP_URL =
@@ -196,22 +199,24 @@ function Hero() {
         {/* Bottom stats strip */}
         <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-5">
           {[
-            { n: "2004", l: "Fundada em SP - Brasil" },
-            { n: "2016—2025", l: "Operação em Portugal" },
-            { n: "2026", l: "Operação em Piracicaba - SP" },
-            { n: "20+", l: "Anos de experiência" },
-            { n: "100%", l: "Foco em resultados" },
+            { n: "2004", l1: "Fundada em São Paulo", l2: "SP - Brasil" },
+            { n: "2016—2025", l1: "Operação em Lisboa", l2: "Portugal" },
+            { n: "2026", l1: "Operação em Piracicaba", l2: "SP - Brasil" },
+            { n: "20+", l1: "Anos de experiência", l2: "" },
+            { n: "100%", l1: "Foco em resultados", l2: "" },
           ].map((s) => (
-            <div key={s.l} className="bg-ink px-2 pt-8">
+            <div key={s.l1} className="bg-ink px-2 pt-8">
               <div className="font-display text-3xl font-normal text-primary lg:text-4xl">
                 {s.n}
               </div>
               <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-foreground/60">
-                {s.l}
+                <div>{s.l1}</div>
+                {s.l2 && <div>{s.l2}</div>}
               </div>
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Slogan tag */}
@@ -359,12 +364,13 @@ const specializations = [
     title: "Automação",
     text: "Projetos voltados à otimização de operações, produtividade e integração de processos.",
     items: [
-      "Automação Industrial",
-      "Automação Comercial",
-      "Automação Residencial",
-      "Automação Digital",
-      "Automação de Processos",
+      "Industrial",
+      "Comercial",
+      "Residencial",
+      "Digital",
+      "Processos",
     ],
+
   },
   {
     icon: Cable,
@@ -539,28 +545,29 @@ function Services() {
               </article>
             );
           })}
-
-          {/* Final CTA card filling the grid */}
-          <article className="flex flex-col justify-between gap-8 border-b border-border bg-primary p-8 text-ink lg:p-10">
-            <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
-                Chamada Final
-              </span>
-              <p className="mt-6 font-display text-2xl font-normal leading-snug tracking-tight sm:text-[28px]">
-                Independentemente do segmento, nosso foco é sempre o mesmo: planejar,
-                executar e entregar projetos que gerem{" "}
-                <span className="italic">resultados concretos</span>.
-              </p>
-            </div>
-            <a
-              href="#contato"
-              className="inline-flex items-center justify-between gap-3 border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink/90"
-            >
-              Vamos conversar sobre seu projeto
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          </article>
         </div>
+
+        {/* Final CTA card – full width */}
+        <article className="mt-px flex flex-col justify-between gap-8 bg-primary p-8 text-ink sm:flex-row sm:items-end lg:p-12">
+          <div className="max-w-3xl">
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
+              Chamada Final
+            </span>
+            <p className="mt-6 font-display text-2xl font-normal leading-snug tracking-tight sm:text-[28px] lg:text-3xl">
+              Independentemente do segmento, nosso foco é sempre o mesmo: planejar,
+              executar e entregar projetos que gerem{" "}
+              <span className="italic">resultados concretos</span>.
+            </p>
+          </div>
+          <a
+            href="#contato"
+            className="inline-flex shrink-0 items-center justify-between gap-3 border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink/90"
+          >
+            Vamos conversar sobre seu projeto
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </article>
+
       </div>
 
       <div className="pb-28 lg:pb-36" />
@@ -618,7 +625,32 @@ function Process() {
 /* Segments                                                                   */
 /* -------------------------------------------------------------------------- */
 
-const segments = ["Indústria", "Comércio", "Educação", "Serviços", "Escritórios", "Profissionais Liberais"];
+const segments: { name: string; tip: string }[] = [
+  {
+    name: "Indústria",
+    tip: "Planejamos e executamos projetos de tecnologia, automação e infraestrutura para aumentar a produtividade, reduzir riscos e apoiar o crescimento sustentável das operações industriais.",
+  },
+  {
+    name: "Comércio",
+    tip: "Ajudamos empresas a modernizar sua infraestrutura tecnológica, melhorar processos e garantir que a tecnologia acompanhe o ritmo dos negócios e das vendas.",
+  },
+  {
+    name: "Educação",
+    tip: "Desenvolvemos soluções de tecnologia, conectividade, capacitação e segurança digital para criar ambientes educacionais mais eficientes, seguros e preparados para o futuro.",
+  },
+  {
+    name: "Serviços",
+    tip: "Apoiamos empresas de serviços na transformação digital, automação de processos e gestão de projetos, promovendo eficiência operacional e melhor experiência para seus clientes.",
+  },
+  {
+    name: "Escritórios",
+    tip: "Implementamos soluções de infraestrutura, redes, segurança da informação e suporte tecnológico para que equipes trabalhem com mais produtividade, estabilidade e segurança.",
+  },
+  {
+    name: "Profissionais Liberais",
+    tip: "Oferecemos tecnologia acessível e suporte especializado para que profissionais possam focar em seu negócio enquanto cuidamos da infraestrutura e da segurança digital.",
+  },
+];
 
 function Segments() {
   return (
@@ -640,7 +672,7 @@ function Segments() {
         <div className="mt-16 border-y border-border">
           {segments.map((s, i) => (
             <div
-              key={s}
+              key={s.name}
               className="group flex items-center justify-between border-b border-border py-6 transition-colors last:border-b-0 hover:text-primary lg:py-8"
             >
               <div className="flex items-baseline gap-6">
@@ -648,10 +680,21 @@ function Segments() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="font-display text-2xl font-normal tracking-tight sm:text-3xl lg:text-4xl">
-                  {s}
+                  {s.name}
                 </span>
               </div>
-              <ArrowUpRight className="h-5 w-5 text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+              <div className="group/tip relative">
+                <ArrowUpRight className="h-5 w-5 cursor-help text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+                <div
+                  role="tooltip"
+                  className="pointer-events-none absolute right-0 top-full z-20 mt-3 w-[320px] max-w-[80vw] origin-top-right scale-95 border border-border bg-ink p-5 text-left text-sm leading-relaxed text-ink-foreground/85 opacity-0 shadow-xl transition-all duration-200 group-hover/tip:scale-100 group-hover/tip:opacity-100 sm:w-[380px]"
+                >
+                  <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                    {s.name}
+                  </div>
+                  {s.tip}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -659,6 +702,7 @@ function Segments() {
     </section>
   );
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* Mid CTA                                                                    */
@@ -674,8 +718,9 @@ function CtaMid() {
             Seu próximo desafio tecnológico <em>começa aqui</em>.
           </h2>
           <p className="mt-6 max-w-xl text-base text-ink/80 lg:text-lg">
-            Vamos conversar sobre como a Solucyona pode ajudar sua empresa.
+            Temos um especialista Solucyona para ajudar sua empresa.
           </p>
+
         </div>
         <div className="lg:col-span-4 lg:text-right">
           <a
@@ -876,10 +921,21 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-ink-foreground/10 pt-8 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/40 sm:flex-row sm:items-center">
+        <div className="mt-20 flex flex-col items-center gap-6 border-t border-ink-foreground/10 pt-10 sm:flex-row sm:justify-center sm:gap-12">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/50">
+            Certificações & Afiliações
+          </div>
+          <div className="flex items-center gap-8">
+            <img src={pmpBadge.url} alt="PMP — Project Management Professional Certification" className="h-24 w-24 object-contain" />
+            <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-24 w-24 object-contain" />
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink-foreground/10 pt-8 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/40 sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Solucyona Smart Solutions</span>
           <span>Brasil · Portugal · Piracicaba SP</span>
         </div>
+
       </div>
     </footer>
   );
