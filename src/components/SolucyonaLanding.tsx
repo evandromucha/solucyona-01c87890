@@ -20,6 +20,16 @@ import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
 import pmpBadge from "@/assets/pmp-badge.png.asset.json";
 import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+import amaroLogo from "@/assets/clients/amaro.jpeg.asset.json";
+import christieLogo from "@/assets/clients/christie.gif.asset.json";
+import albertSabinLogo from "@/assets/clients/colegio_albert_sabin.png.asset.json";
+import denverLogo from "@/assets/clients/denver.jpeg.asset.json";
+import famaLogo from "@/assets/clients/faculdade_de_macapa.jpeg.asset.json";
+import filintoMotaLogo from "@/assets/clients/grupo_filinto_mota.jpg.asset.json";
+import formitexLogo from "@/assets/clients/grupo_formitex.png.asset.json";
+import helexiaLogo from "@/assets/clients/helexia.jpg.asset.json";
+import ikeaLogo from "@/assets/clients/ikea.jpg.asset.json";
+import minerthalLogo from "@/assets/clients/minerthal.png.asset.json";
 
 
 
