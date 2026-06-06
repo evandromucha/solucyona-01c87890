@@ -622,7 +622,32 @@ function Process() {
 /* Segments                                                                   */
 /* -------------------------------------------------------------------------- */
 
-const segments = ["Indústria", "Comércio", "Educação", "Serviços", "Escritórios", "Profissionais Liberais"];
+const segments: { name: string; tip: string }[] = [
+  {
+    name: "Indústria",
+    tip: "Planejamos e executamos projetos de tecnologia, automação e infraestrutura para aumentar a produtividade, reduzir riscos e apoiar o crescimento sustentável das operações industriais.",
+  },
+  {
+    name: "Comércio",
+    tip: "Ajudamos empresas a modernizar sua infraestrutura tecnológica, melhorar processos e garantir que a tecnologia acompanhe o ritmo dos negócios e das vendas.",
+  },
+  {
+    name: "Educação",
+    tip: "Desenvolvemos soluções de tecnologia, conectividade, capacitação e segurança digital para criar ambientes educacionais mais eficientes, seguros e preparados para o futuro.",
+  },
+  {
+    name: "Serviços",
+    tip: "Apoiamos empresas de serviços na transformação digital, automação de processos e gestão de projetos, promovendo eficiência operacional e melhor experiência para seus clientes.",
+  },
+  {
+    name: "Escritórios",
+    tip: "Implementamos soluções de infraestrutura, redes, segurança da informação e suporte tecnológico para que equipes trabalhem com mais produtividade, estabilidade e segurança.",
+  },
+  {
+    name: "Profissionais Liberais",
+    tip: "Oferecemos tecnologia acessível e suporte especializado para que profissionais possam focar em seu negócio enquanto cuidamos da infraestrutura e da segurança digital.",
+  },
+];
 
 function Segments() {
   return (
@@ -644,7 +669,7 @@ function Segments() {
         <div className="mt-16 border-y border-border">
           {segments.map((s, i) => (
             <div
-              key={s}
+              key={s.name}
               className="group flex items-center justify-between border-b border-border py-6 transition-colors last:border-b-0 hover:text-primary lg:py-8"
             >
               <div className="flex items-baseline gap-6">
@@ -652,10 +677,21 @@ function Segments() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="font-display text-2xl font-normal tracking-tight sm:text-3xl lg:text-4xl">
-                  {s}
+                  {s.name}
                 </span>
               </div>
-              <ArrowUpRight className="h-5 w-5 text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+              <div className="group/tip relative">
+                <ArrowUpRight className="h-5 w-5 cursor-help text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+                <div
+                  role="tooltip"
+                  className="pointer-events-none absolute right-0 top-full z-20 mt-3 w-[320px] max-w-[80vw] origin-top-right scale-95 border border-border bg-ink p-5 text-left text-sm leading-relaxed text-ink-foreground/85 opacity-0 shadow-xl transition-all duration-200 group-hover/tip:scale-100 group-hover/tip:opacity-100 sm:w-[380px]"
+                >
+                  <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                    {s.name}
+                  </div>
+                  {s.tip}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -663,6 +699,7 @@ function Segments() {
     </section>
   );
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* Mid CTA                                                                    */
