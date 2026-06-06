@@ -14,6 +14,7 @@ import {
   Cable,
   Zap,
   GraduationCap,
+  Plane,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
