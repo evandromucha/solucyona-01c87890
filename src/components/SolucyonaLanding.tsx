@@ -778,11 +778,12 @@ function Clients() {
                     className="object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-              <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
-                {c.name}
-              </span>
-            </li>
-          ))}
+                <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
+                  {c.name}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
