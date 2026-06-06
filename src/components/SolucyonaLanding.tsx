@@ -1042,6 +1042,7 @@ export default function SolucyonaLanding() {
         <Services />
         <Process />
         <Segments />
+        <Clients />
         <CtaMid />
         <Contact />
       </main>
