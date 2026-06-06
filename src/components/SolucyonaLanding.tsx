@@ -542,28 +542,29 @@ function Services() {
               </article>
             );
           })}
-
-          {/* Final CTA card filling the grid */}
-          <article className="flex flex-col justify-between gap-8 border-b border-border bg-primary p-8 text-ink lg:p-10">
-            <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
-                Chamada Final
-              </span>
-              <p className="mt-6 font-display text-2xl font-normal leading-snug tracking-tight sm:text-[28px]">
-                Independentemente do segmento, nosso foco é sempre o mesmo: planejar,
-                executar e entregar projetos que gerem{" "}
-                <span className="italic">resultados concretos</span>.
-              </p>
-            </div>
-            <a
-              href="#contato"
-              className="inline-flex items-center justify-between gap-3 border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink/90"
-            >
-              Vamos conversar sobre seu projeto
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          </article>
         </div>
+
+        {/* Final CTA card – full width */}
+        <article className="mt-px flex flex-col justify-between gap-8 bg-primary p-8 text-ink sm:flex-row sm:items-end lg:p-12">
+          <div className="max-w-3xl">
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
+              Chamada Final
+            </span>
+            <p className="mt-6 font-display text-2xl font-normal leading-snug tracking-tight sm:text-[28px] lg:text-3xl">
+              Independentemente do segmento, nosso foco é sempre o mesmo: planejar,
+              executar e entregar projetos que gerem{" "}
+              <span className="italic">resultados concretos</span>.
+            </p>
+          </div>
+          <a
+            href="#contato"
+            className="inline-flex shrink-0 items-center justify-between gap-3 border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink/90"
+          >
+            Vamos conversar sobre seu projeto
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </article>
+
       </div>
 
       <div className="pb-28 lg:pb-36" />
