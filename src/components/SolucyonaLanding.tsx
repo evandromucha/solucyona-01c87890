@@ -20,6 +20,16 @@ import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
 import pmpBadge from "@/assets/pmp-badge.png.asset.json";
 import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+import amaroLogo from "@/assets/clients/amaro.jpeg.asset.json";
+import christieLogo from "@/assets/clients/christie.gif.asset.json";
+import albertSabinLogo from "@/assets/clients/colegio_albert_sabin.png.asset.json";
+import denverLogo from "@/assets/clients/denver.jpeg.asset.json";
+import famaLogo from "@/assets/clients/faculdade_de_macapa.jpeg.asset.json";
+import filintoMotaLogo from "@/assets/clients/grupo_filinto_mota.jpg.asset.json";
+import formitexLogo from "@/assets/clients/grupo_formitex.png.asset.json";
+import helexiaLogo from "@/assets/clients/helexia.jpg.asset.json";
+import ikeaLogo from "@/assets/clients/ikea.jpg.asset.json";
+import minerthalLogo from "@/assets/clients/minerthal.png.asset.json";
 
 
 
@@ -703,6 +713,64 @@ function Segments() {
   );
 }
 
+/* -------------------------------------------------------------------------- */
+/* Clients                                                                    */
+/* -------------------------------------------------------------------------- */
+
+const clients: { name: string; logo: string }[] = [
+  { name: "Amaro", logo: amaroLogo.url },
+  { name: "Christie", logo: christieLogo.url },
+  { name: "Colégio Albert Sabin", logo: albertSabinLogo.url },
+  { name: "Denver", logo: denverLogo.url },
+  { name: "Faculdade de Macapá", logo: famaLogo.url },
+  { name: "Grupo Filinto Mota", logo: filintoMotaLogo.url },
+  { name: "Grupo Formitex", logo: formitexLogo.url },
+  { name: "Helexia / Voltalia", logo: helexiaLogo.url },
+  { name: "IKEA", logo: ikeaLogo.url },
+  { name: "Minerthal", logo: minerthalLogo.url },
+];
+
+function Clients() {
+  return (
+    <section className="border-b border-border bg-muted/30 py-28 lg:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <Eyebrow>06 / Clientes</Eyebrow>
+            <h2 className="mt-6 font-display text-4xl font-normal leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              Marcas que confiam na <em>Solucyona</em>.
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-foreground/70 lg:col-span-4 lg:col-start-9">
+            Organizações de diferentes setores e geografias que escolheram a Solucyona
+            para conduzir seus projetos de tecnologia e infraestrutura.
+          </p>
+        </div>
+
+        <ul className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {clients.map((c) => (
+            <li key={c.name} className="flex flex-col items-center text-center">
+              <div className="group relative flex aspect-square w-full max-w-[140px] items-center justify-center overflow-hidden rounded-full border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img
+                  src={c.logo}
+                  alt={c.name}
+                  loading="lazy"
+                  className="h-[70%] w-[70%] object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
+                {c.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+
+
 
 /* -------------------------------------------------------------------------- */
 /* Mid CTA                                                                    */
@@ -974,6 +1042,7 @@ export default function SolucyonaLanding() {
         <Services />
         <Process />
         <Segments />
+        <Clients />
         <CtaMid />
         <Contact />
       </main>
