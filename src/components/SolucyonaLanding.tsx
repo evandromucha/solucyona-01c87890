@@ -715,8 +715,9 @@ function CtaMid() {
             Seu próximo desafio tecnológico <em>começa aqui</em>.
           </h2>
           <p className="mt-6 max-w-xl text-base text-ink/80 lg:text-lg">
-            Vamos conversar sobre como a Solucyona pode ajudar sua empresa.
+            Temos um especialista Solucyona para ajudar sua empresa.
           </p>
+
         </div>
         <div className="lg:col-span-4 lg:text-right">
           <a
