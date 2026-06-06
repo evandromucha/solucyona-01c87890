@@ -194,10 +194,11 @@ function Hero() {
         </div>
 
         {/* Bottom stats strip */}
-        <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-4">
+        <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-5">
           {[
-            { n: "2004", l: "FUNDADA EM SÃO PAULO - BRASIL" },
+            { n: "2004", l: "Fundada em SP - Brasil" },
             { n: "2016—2025", l: "Operação em Portugal" },
+            { n: "2026", l: "Operação em Piracicaba - SP" },
             { n: "20+", l: "Anos de experiência" },
             { n: "100%", l: "Foco em resultados" },
           ].map((s) => (
