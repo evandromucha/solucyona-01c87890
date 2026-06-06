@@ -196,22 +196,24 @@ function Hero() {
         {/* Bottom stats strip */}
         <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-5">
           {[
-            { n: "2004", l: "Fundada em SP - Brasil" },
-            { n: "2016—2025", l: "Operação em Portugal" },
-            { n: "2026", l: "Operação em Piracicaba - SP" },
-            { n: "20+", l: "Anos de experiência" },
-            { n: "100%", l: "Foco em resultados" },
+            { n: "2004", l1: "Fundada em São Paulo", l2: "SP - Brasil" },
+            { n: "2016—2025", l1: "Operação em Lisboa", l2: "Portugal" },
+            { n: "2026", l1: "Operação em Piracicaba", l2: "SP - Brasil" },
+            { n: "20+", l1: "Anos de experiência", l2: "" },
+            { n: "100%", l1: "Foco em resultados", l2: "" },
           ].map((s) => (
-            <div key={s.l} className="bg-ink px-2 pt-8">
+            <div key={s.l1} className="bg-ink px-2 pt-8">
               <div className="font-display text-3xl font-normal text-primary lg:text-4xl">
                 {s.n}
               </div>
               <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-foreground/60">
-                {s.l}
+                <div>{s.l1}</div>
+                {s.l2 && <div>{s.l2}</div>}
               </div>
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Slogan tag */}
