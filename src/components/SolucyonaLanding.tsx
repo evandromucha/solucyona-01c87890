@@ -725,24 +725,25 @@ function Segments() {
 /* Clients                                                                    */
 /* -------------------------------------------------------------------------- */
 
-const clients: { name: string; logo: string; bg: string; scale?: number }[] = [
-  { name: "Amaro", logo: amaroLogo.url, bg: "#000000" },
-  { name: "Christie", logo: christieLogo.url, bg: "#ffffff" },
-  { name: "Colégio Albert Sabin", logo: albertSabinLogo.url, bg: "#ffffff" },
-  { name: "Denver", logo: denverLogo.url, bg: "#0014a8" },
-  { name: "Faculdade de Macapá", logo: famaLogo.url, bg: "#ffffff" },
-  { name: "Grupo Filinto Mota", logo: filintoMotaLogo.url, bg: "#1a1a1a" },
-  { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff" },
-  { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff" },
-  { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3" },
-  { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7 },
-  { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000" },
-  { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff" },
-  { name: "Regatta", logo: regattaLogo.url, bg: "#16307a", scale: 0.7 },
-  { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff" },
-  { name: "UNIC", logo: unicLogo.url, bg: "#ffffff", scale: 0.7 },
-  { name: "Metodista", logo: metodistaLogo.url, bg: "#ffffff", scale: 0.7 },
-  { name: "Zeloso", logo: zelosoLogo.url, bg: "#ffffff", scale: 0.7 },
+const clients: { name: string; logo: string; bg: string; scale?: number; url: string }[] = [
+  { name: "Amaro", logo: amaroLogo.url, bg: "#000000", url: "https://amaro.com/" },
+  { name: "Christie", logo: christieLogo.url, bg: "#ffffff", url: "https://www.christiedigital.com/" },
+  { name: "Colégio Albert Sabin", logo: albertSabinLogo.url, bg: "#ffffff", url: "https://www.albertsabin.com.br/" },
+  { name: "Denver", logo: denverLogo.url, bg: "#0014a8", url: "https://www.denverespecialidades.com.br/" },
+  { name: "Faculdade de Macapá", logo: famaLogo.url, bg: "#ffffff", url: "https://www.faculdadedemacapa.com.br" },
+  { name: "Grupo 2SV", logo: grupo2svLogo.url, bg: "#ffffff", url: "https://2sv.com.br/" },
+  { name: "Grupo Filinto Mota", logo: filintoMotaLogo.url, bg: "#1a1a1a", url: "https://www.filintomota.pt/" },
+  { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff", url: "https://www.formitex.com.br" },
+  { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff", url: "https://helexia.pt" },
+  { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3", url: "https://www.ikea.com/pt/pt/" },
+  { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.minerthal.com.br/" },
+  { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", url: "https://www.pingodoce.pt/" },
+  { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff", url: "https://www.poweron.pt/" },
+  { name: "Regatta", logo: regattaLogo.url, bg: "#ffffff", url: "https://www.regatta.com.br/" },
+  { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff", url: "https://www.santogal.pt/pt/" },
+  { name: "Universidade de Cuiabá", logo: unicLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.unic.com.br/" },
+  { name: "Universidade Metodista de São Paulo", logo: metodistaLogo.url, bg: "#ffffff", scale: 0.7, url: "https://metodista.br/" },
+  { name: "Zeloso", logo: zelosoLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.zeloso.com.br/" },
 ];
 
 function Clients() {
@@ -767,8 +768,12 @@ function Clients() {
             const pct = `${Math.round((c.scale ?? 0.88) * 100)}%`;
             return (
               <li key={c.name} className="flex flex-col items-center text-center">
-                <div
-                  className="group relative flex aspect-square w-full max-w-[140px] items-center justify-center overflow-hidden rounded-full border border-border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                <a
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visitar site de ${c.name}`}
+                  className="group relative flex aspect-square w-full max-w-[140px] items-center justify-center overflow-hidden rounded-full border border-border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   style={{ backgroundColor: c.bg }}
                 >
                   <img
@@ -778,7 +783,7 @@ function Clients() {
                     style={{ width: pct, height: pct }}
                     className="object-contain transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
+                </a>
                 <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
                   {c.name}
                 </span>
