@@ -37,6 +37,7 @@ import santogalLogo from "@/assets/clients/santogal.jpeg.asset.json";
 import unicLogo from "@/assets/clients/universidade_de_cuiaba.png.asset.json";
 import metodistaLogo from "@/assets/clients/universidade_metodista_de_sao_paulo.jpg.asset.json";
 import zelosoLogo from "@/assets/clients/zeloso.jpg.asset.json";
+import grupo2svLogo from "@/assets/clients/grupo_2sv.jpg.asset.json";
 
 
 
