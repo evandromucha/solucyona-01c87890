@@ -732,7 +732,7 @@ const clients: { name: string; logo: string }[] = [
 
 function Clients() {
   return (
-    <section className="border-b border-border bg-paper py-28 lg:py-36">
+    <section className="border-b border-border bg-muted/30 py-28 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
