@@ -392,6 +392,21 @@ const specializations = [
     ],
   },
   {
+    icon: Plane,
+    title: "Inspeção Aérea e Audiovisual",
+    text: "Operações com drones e produção audiovisual para inspeções, documentação técnica e comunicação corporativa.",
+    items: [
+      "Inspeção Técnica Aérea",
+      "Monitoramento Aéreo de Projetos",
+      "Documentação Técnica Aérea",
+      "Inspeção Predial e Industrial",
+      "Levantamento para Infraestruturas de Rede",
+      "Avaliação Técnica para Instalações",
+      "Filmagens Institucionais",
+      "Produção de Conteúdo Corporativo",
+    ],
+  },
+  {
     icon: GraduationCap,
     title: "Treinamentos e Capacitação",
     text: "Projetos de desenvolvimento de competências para equipes e organizações.",
