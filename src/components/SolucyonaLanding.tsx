@@ -14,6 +14,7 @@ import {
   Cable,
   Zap,
   GraduationCap,
+  Plane,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoMark from "@/assets/solucyona-logo.png";
@@ -159,7 +160,7 @@ function Hero() {
       <div className="mx-auto max-w-[1400px] px-6 pb-24 pt-24 md:pt-32 lg:px-12 lg:pb-32">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-9">
-            <Eyebrow light>OPERAÇÃO EM LISBOA - PORTUGAL</Eyebrow>
+            <Eyebrow light>CONSULTORIA EM TECNOLOGIA E GESTÃO DE PROJETOS</Eyebrow>
             <h1 className="mt-8 font-display text-[44px] font-normal leading-[1.02] tracking-[-0.02em] text-balance sm:text-6xl md:text-7xl lg:text-[88px]">
               Soluções inteligentes para{" "}
               <span className="italic text-primary">infraestrutura</span>, tecnologia e{" "}
@@ -193,10 +194,11 @@ function Hero() {
         </div>
 
         {/* Bottom stats strip */}
-        <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-4">
+        <div className="mt-20 grid gap-px border-t border-ink-foreground/10 bg-ink-foreground/10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-5">
           {[
-            { n: "2004", l: "FUNDADA EM SÃO PAULO - BRASIL" },
+            { n: "2004", l: "Fundada em SP - Brasil" },
             { n: "2016—2025", l: "Operação em Portugal" },
+            { n: "2026", l: "Operação em Piracicaba - SP" },
             { n: "20+", l: "Anos de experiência" },
             { n: "100%", l: "Foco em resultados" },
           ].map((s) => (
@@ -387,6 +389,21 @@ const specializations = [
       "Adequação de Ambientes",
       "Diagnóstico e Solução de Problemas",
       "Infraestrutura de suporte à tecnologia",
+    ],
+  },
+  {
+    icon: Plane,
+    title: "Inspeção Aérea e Audiovisual",
+    text: "Operações com drones e produção audiovisual para inspeções, documentação técnica e comunicação corporativa.",
+    items: [
+      "Inspeção Técnica Aérea",
+      "Monitoramento Aéreo de Projetos",
+      "Documentação Técnica Aérea",
+      "Inspeção Predial e Industrial",
+      "Levantamento para Infraestruturas de Rede",
+      "Avaliação Técnica para Instalações",
+      "Filmagens Institucionais",
+      "Produção de Conteúdo Corporativo",
     ],
   },
   {
