@@ -724,17 +724,24 @@ function Segments() {
 /* Clients                                                                    */
 /* -------------------------------------------------------------------------- */
 
-const clients: { name: string; logo: string }[] = [
-  { name: "Amaro", logo: amaroLogo.url },
-  { name: "Christie", logo: christieLogo.url },
-  { name: "Colégio Albert Sabin", logo: albertSabinLogo.url },
-  { name: "Denver", logo: denverLogo.url },
-  { name: "Faculdade de Macapá", logo: famaLogo.url },
-  { name: "Grupo Filinto Mota", logo: filintoMotaLogo.url },
-  { name: "Grupo Formitex", logo: formitexLogo.url },
-  { name: "Helexia / Voltalia", logo: helexiaLogo.url },
-  { name: "IKEA", logo: ikeaLogo.url },
-  { name: "Minerthal", logo: minerthalLogo.url },
+const clients: { name: string; logo: string; bg: string }[] = [
+  { name: "Amaro", logo: amaroLogo.url, bg: "#000000" },
+  { name: "Christie", logo: christieLogo.url, bg: "#ffffff" },
+  { name: "Colégio Albert Sabin", logo: albertSabinLogo.url, bg: "#ffffff" },
+  { name: "Denver", logo: denverLogo.url, bg: "#0014a8" },
+  { name: "Faculdade de Macapá", logo: famaLogo.url, bg: "#ffffff" },
+  { name: "Grupo Filinto Mota", logo: filintoMotaLogo.url, bg: "#1a1a1a" },
+  { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff" },
+  { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff" },
+  { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3" },
+  { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff" },
+  { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000" },
+  { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff" },
+  { name: "Regatta", logo: regattaLogo.url, bg: "#16307a" },
+  { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff" },
+  { name: "UNIC", logo: unicLogo.url, bg: "#ffffff" },
+  { name: "Metodista", logo: metodistaLogo.url, bg: "#ffffff" },
+  { name: "Zeloso", logo: zelosoLogo.url, bg: "#ffffff" },
 ];
 
 function Clients() {
@@ -757,12 +764,15 @@ function Clients() {
         <ul className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {clients.map((c) => (
             <li key={c.name} className="flex flex-col items-center text-center">
-              <div className="group relative flex aspect-square w-full max-w-[140px] items-center justify-center overflow-hidden rounded-full border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div
+                className="group relative flex aspect-square w-full max-w-[140px] items-center justify-center overflow-hidden rounded-full border border-border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{ backgroundColor: c.bg }}
+              >
                 <img
                   src={c.logo}
                   alt={c.name}
                   loading="lazy"
-                  className="h-[70%] w-[70%] object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-[88%] w-[88%] object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
