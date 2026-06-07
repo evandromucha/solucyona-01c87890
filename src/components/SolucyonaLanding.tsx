@@ -739,14 +739,14 @@ const clients: { name: string; logo: string; bg: string; scale?: number; url: st
   { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff", url: "https://www.formitex.com.br" },
   { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff", url: "https://helexia.pt" },
   { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3", url: "https://www.ikea.com/pt/pt/" },
+  { name: "LX Factory", logo: lxFactoryLogo.url, bg: "#000000", url: "https://lxfactory.com/" },
   { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.minerthal.com.br/" },
   { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", cover: true, url: "https://www.pingodoce.pt/" },
-  { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff", url: "https://www.poweron.pt/" },
+  { name: "Rede Globo", logo: redeGloboLogo.url, bg: "#ffffff", url: "https://redeglobo.globo.com/" },
   { name: "Regatta", logo: regattaLogo.url, bg: "#ffffff", url: "https://www.regatta.com.br/" },
   { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff", url: "https://www.santogal.pt/pt/" },
   { name: "Universidade de Cuiabá", logo: unicLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.unic.com.br/" },
   { name: "Universidade Metodista de São Paulo", logo: metodistaLogo.url, bg: "#ffffff", scale: 0.7, url: "https://metodista.br/" },
-  { name: "Zeloso", logo: zelosoLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.zeloso.com.br/" },
 ];
 
 function Clients() {
