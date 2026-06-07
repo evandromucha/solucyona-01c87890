@@ -1019,15 +1019,30 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center gap-6 border-t border-ink-foreground/10 pt-10 sm:flex-row sm:justify-center sm:gap-12">
+        <div className="mt-20 flex flex-col items-center gap-8 border-t border-ink-foreground/10 pt-10">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/50">
             Certificações & Afiliações
           </div>
-          <div className="flex items-center gap-8">
-            <img src={pmpBadge.url} alt="PMP — Project Management Professional Certification" className="h-24 w-24 object-contain" />
-            <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-24 w-24 object-contain" />
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={pmpBadge.url} alt="PMP — Project Management Professional" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">PMP — Project Management Professional</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">Membro PMI — Project Management Institute</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={dgegBadge.url} alt="DGEG — Direção-Geral de Energia e Geologia" className="h-20 w-20 object-contain rounded-full bg-white p-1" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">DGEG — Direção-Geral de Energia e Geologia · PT</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">CREA-SP — Conselho Regional de Engenharia e Agronomia · BR</span>
+            </div>
           </div>
         </div>
+
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink-foreground/10 pt-8 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/40 sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Solucyona Smart Solutions</span>
