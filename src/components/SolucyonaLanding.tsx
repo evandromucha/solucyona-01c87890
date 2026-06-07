@@ -34,13 +34,13 @@ import helexiaLogo from "@/assets/clients/helexia.jpg.asset.json";
 import ikeaLogo from "@/assets/clients/ikea.jpg.asset.json";
 import minerthalLogo from "@/assets/clients/minerthal.png.asset.json";
 import pingoDoceLogo from "@/assets/clients/pingo_doce.png.asset.json";
-import poweronLogo from "@/assets/clients/poweron.png.asset.json";
 import regattaLogo from "@/assets/clients/regatta.png.asset.json";
 import santogalLogo from "@/assets/clients/santogal.jpeg.asset.json";
 import unicLogo from "@/assets/clients/universidade_de_cuiaba.png.asset.json";
 import metodistaLogo from "@/assets/clients/universidade_metodista_de_sao_paulo.jpg.asset.json";
-import zelosoLogo from "@/assets/clients/zeloso.jpg.asset.json";
 import grupo2svLogo from "@/assets/clients/grupo_2sv.jpg.asset.json";
+import redeGloboLogo from "@/assets/clients/rede_globo.svg.asset.json";
+import lxFactoryLogo from "@/assets/clients/lx_factory.png.asset.json";
 
 
 
@@ -448,6 +448,54 @@ const specializations = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* Certifications                                                             */
+/* -------------------------------------------------------------------------- */
+
+function Certifications() {
+  const items = [
+    { src: pmpBadge.url, label: "PMP — Project Management Professional", rounded: false },
+    { src: pmiBadge.url, label: "Membro PMI — Project Management Institute", rounded: false },
+    { src: dgegBadge.url, label: "DGEG — Direção-Geral de Energia e Geologia · PT", rounded: true },
+    { src: creaSpBadge.url, label: "CREA-SP — Conselho Regional de Engenharia e Agronomia · BR", rounded: false },
+  ];
+  return (
+    <section id="certificacoes" className="border-b border-border bg-background py-28 lg:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <Eyebrow>03 / Certificações & Afiliações</Eyebrow>
+            <h2 className="mt-6 font-display text-4xl font-normal leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              Credenciais que <em>respaldam</em> nosso trabalho.
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-foreground/70 lg:col-span-4 lg:col-start-9">
+            Filiações e registros profissionais que garantem rigor técnico, ética e
+            conformidade regulatória nos projetos que entregamos.
+          </p>
+        </div>
+
+        <div className="mt-16 flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
+          {items.map((it) => (
+            <div key={it.label} className="flex flex-col items-center gap-3 max-w-[180px] text-center">
+              <img
+                src={it.src}
+                alt={it.label}
+                className={`h-24 w-24 object-contain ${it.rounded ? "rounded-full bg-white p-1" : ""}`}
+              />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-foreground/60">
+                {it.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+
 function Services() {
   return (
     <section id="servicos" className="border-b border-border bg-background">
@@ -739,14 +787,14 @@ const clients: { name: string; logo: string; bg: string; scale?: number; url: st
   { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff", url: "https://www.formitex.com.br" },
   { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff", url: "https://helexia.pt" },
   { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3", url: "https://www.ikea.com/pt/pt/" },
+  { name: "LX Factory", logo: lxFactoryLogo.url, bg: "#000000", url: "https://lxfactory.com/" },
   { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.minerthal.com.br/" },
   { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", cover: true, url: "https://www.pingodoce.pt/" },
-  { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff", url: "https://www.poweron.pt/" },
+  { name: "Rede Globo", logo: redeGloboLogo.url, bg: "#ffffff", url: "https://redeglobo.globo.com/" },
   { name: "Regatta", logo: regattaLogo.url, bg: "#ffffff", url: "https://www.regatta.com.br/" },
   { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff", url: "https://www.santogal.pt/pt/" },
   { name: "Universidade de Cuiabá", logo: unicLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.unic.com.br/" },
   { name: "Universidade Metodista de São Paulo", logo: metodistaLogo.url, bg: "#ffffff", scale: 0.7, url: "https://metodista.br/" },
-  { name: "Zeloso", logo: zelosoLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.zeloso.com.br/" },
 ];
 
 function Clients() {
@@ -1020,29 +1068,6 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center gap-8 border-t border-ink-foreground/10 pt-10">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/50">
-            Certificações & Afiliações
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={pmpBadge.url} alt="PMP — Project Management Professional" className="h-20 w-20 object-contain" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">PMP — Project Management Professional</span>
-            </div>
-            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-20 w-20 object-contain" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">Membro PMI — Project Management Institute</span>
-            </div>
-            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={dgegBadge.url} alt="DGEG — Direção-Geral de Energia e Geologia" className="h-20 w-20 object-contain rounded-full bg-white p-1" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">DGEG — Direção-Geral de Energia e Geologia · PT</span>
-            </div>
-            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">CREA-SP — Conselho Regional de Engenharia e Agronomia · BR</span>
-            </div>
-          </div>
-        </div>
 
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink-foreground/10 pt-8 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/40 sm:flex-row sm:items-center">
@@ -1085,6 +1110,7 @@ export default function SolucyonaLanding() {
         <Hero />
         <About />
         <Differentiators />
+        <Certifications />
         <Services />
         <Process />
         <Segments />
