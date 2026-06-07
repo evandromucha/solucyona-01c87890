@@ -17,9 +17,12 @@ import {
   Plane,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import logoMark from "@/assets/solucyona-logo.png";
+import logoMarkAsset from "@/assets/solucyona-logo.png.asset.json";
 import pmpBadge from "@/assets/pmp-badge.png.asset.json";
 import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+import dgegBadge from "@/assets/dgeg.jpeg.asset.json";
+import creaSpBadge from "@/assets/crea-sp.png.asset.json";
+const logoMark = logoMarkAsset.url;
 import amaroLogo from "@/assets/clients/amaro.jpeg.asset.json";
 import christieLogo from "@/assets/clients/christie.gif.asset.json";
 import albertSabinLogo from "@/assets/clients/colegio_albert_sabin.png.asset.json";
@@ -67,7 +70,7 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <a href="#inicio" className="group flex items-center gap-3" aria-label="Solucyona Smart Solutions">
-      <img src={logoMark} alt="" width={36} height={36} className="h-9 w-9 shrink-0" />
+      <img src={logoMark} alt="" width={72} height={72} className="h-[72px] w-[72px] shrink-0" />
       <span className="flex items-baseline gap-1.5">
         <span
           className={`font-display text-2xl font-normal tracking-tight font-mono ${
@@ -1016,15 +1019,30 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center gap-6 border-t border-ink-foreground/10 pt-10 sm:flex-row sm:justify-center sm:gap-12">
+        <div className="mt-20 flex flex-col items-center gap-8 border-t border-ink-foreground/10 pt-10">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/50">
             Certificações & Afiliações
           </div>
-          <div className="flex items-center gap-8">
-            <img src={pmpBadge.url} alt="PMP — Project Management Professional Certification" className="h-24 w-24 object-contain" />
-            <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-24 w-24 object-contain" />
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={pmpBadge.url} alt="PMP — Project Management Professional" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">PMP — Project Management Professional</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={pmiBadge.url} alt="PMI Member — Project Management Institute" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">Membro PMI — Project Management Institute</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={dgegBadge.url} alt="DGEG — Direção-Geral de Energia e Geologia" className="h-20 w-20 object-contain rounded-full bg-white p-1" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">DGEG — Direção-Geral de Energia e Geologia · PT</span>
+            </div>
+            <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
+              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">CREA-SP — Conselho Regional de Engenharia e Agronomia · BR</span>
+            </div>
           </div>
         </div>
+
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink-foreground/10 pt-8 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-foreground/40 sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Solucyona Smart Solutions</span>
