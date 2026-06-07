@@ -1038,7 +1038,7 @@ function Footer() {
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">DGEG — Direção-Geral de Energia e Geologia · PT</span>
             </div>
             <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain" />
+              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain rounded-full bg-white p-2" />
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">CREA-SP — Conselho Regional de Engenharia e Agronomia · BR</span>
             </div>
           </div>
