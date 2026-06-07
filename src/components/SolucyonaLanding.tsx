@@ -41,6 +41,7 @@ import metodistaLogo from "@/assets/clients/universidade_metodista_de_sao_paulo.
 import grupo2svLogo from "@/assets/clients/grupo_2sv.jpg.asset.json";
 import redeGloboLogo from "@/assets/clients/rede_globo.svg.asset.json";
 import lxFactoryLogo from "@/assets/clients/lx_factory.png.asset.json";
+import evandroPhoto from "@/assets/evandro.png.asset.json";
 
 
 
