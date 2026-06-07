@@ -739,31 +739,30 @@ function Segments() {
           </p>
         </div>
 
-        <div className="mt-16 border-y border-border">
+        <div className="mt-16 grid gap-px border-y border-border bg-border sm:grid-cols-2">
           {segments.map((s, i) => (
             <div
               key={s.name}
-              className="group flex items-center justify-between border-b border-border py-6 transition-colors last:border-b-0 hover:text-primary lg:py-8"
+              className="group relative flex items-center justify-between border-b border-border bg-background px-6 py-6 transition-colors hover:bg-ink hover:text-ink-foreground sm:px-8 lg:px-10 lg:py-8"
             >
-              <div className="flex items-baseline gap-6">
-                <span className="font-mono text-xs text-foreground/40">
+              <div className="flex items-baseline gap-4">
+                <span className="font-mono text-xs text-foreground/40 transition-colors group-hover:text-ink-foreground/50">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="font-display text-2xl font-normal tracking-tight sm:text-3xl lg:text-4xl">
                   {s.name}
                 </span>
               </div>
-              <div className="group/tip relative">
-                <ArrowUpRight className="h-5 w-5 cursor-help text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
-                <div
-                  role="tooltip"
-                  className="pointer-events-none absolute right-0 top-full z-20 mt-3 w-[320px] max-w-[80vw] origin-top-right scale-95 border border-border bg-ink p-5 text-left text-sm leading-relaxed text-ink-foreground/85 opacity-0 shadow-xl transition-all duration-200 group-hover/tip:scale-100 group-hover/tip:opacity-100 sm:w-[380px]"
-                >
-                  <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-                    {s.name}
-                  </div>
-                  {s.tip}
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-foreground/30 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+              {/* Tooltip on hover of the whole row */}
+              <div
+                role="tooltip"
+                className="pointer-events-none absolute left-0 top-full z-20 mt-px w-full border border-border bg-ink p-5 text-left text-sm leading-relaxed text-ink-foreground/85 opacity-0 shadow-xl transition-all duration-200 group-hover:opacity-100 sm:w-[110%] sm:max-w-[380px]"
+              >
+                <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                  {s.name}
                 </div>
+                {s.tip}
               </div>
             </div>
           ))}
