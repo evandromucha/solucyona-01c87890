@@ -41,6 +41,7 @@ import metodistaLogo from "@/assets/clients/universidade_metodista_de_sao_paulo.
 import grupo2svLogo from "@/assets/clients/grupo_2sv.jpg.asset.json";
 import redeGloboLogo from "@/assets/clients/rede_globo.svg.asset.json";
 import lxFactoryLogo from "@/assets/clients/lx_factory.png.asset.json";
+import evandroPhoto from "@/assets/evandro.png.asset.json";
 
 
 
@@ -787,7 +788,7 @@ const clients: { name: string; logo: string; bg: string; scale?: number; url: st
   { name: "Grupo Formitex", logo: formitexLogo.url, bg: "#ffffff", url: "https://www.formitex.com.br" },
   { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff", url: "https://helexia.pt" },
   { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3", url: "https://www.ikea.com/pt/pt/" },
-  { name: "LX Factory", logo: lxFactoryLogo.url, bg: "#000000", url: "https://lxfactory.com/" },
+  { name: "LX Factory", logo: lxFactoryLogo.url, bg: "#000000", scale: 1.1, url: "https://lxfactory.com/" },
   { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.minerthal.com.br/" },
   { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", cover: true, url: "https://www.pingodoce.pt/" },
   { name: "Rede Globo", logo: redeGloboLogo.url, bg: "#ffffff", url: "https://redeglobo.globo.com/" },
@@ -1000,6 +1001,51 @@ function Contact() {
               </button>
             </form>
           )}
+
+          <div className="group relative mt-8">
+            <button
+              type="button"
+              className="inline-flex w-full items-center justify-between gap-3 bg-[#e85d1f] px-6 py-4 text-sm font-medium text-white transition-colors hover:bg-[#c94a10]"
+            >
+              Conheça o CEO da Solucyona <ArrowUpRight className="h-4 w-4" />
+            </button>
+
+            <div className="pointer-events-none absolute left-0 right-0 top-full z-30 mt-3 origin-top scale-95 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100">
+              <div className="border border-border bg-background p-6 shadow-2xl lg:p-8">
+                <div className="flex flex-col gap-6 sm:flex-row">
+                  <img
+                    src={evandroPhoto.url}
+                    alt="Evandro Mucha — CEO da Solucyona"
+                    className="h-40 w-40 flex-shrink-0 object-cover sm:h-48 sm:w-48"
+                  />
+                  <div className="flex-1">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                      CEO · Solucyona
+                    </div>
+                    <h4 className="mt-2 font-display text-2xl leading-tight">Evandro Mucha</h4>
+                    <p className="mt-1 text-xs italic text-foreground/60">
+                      Sênior Project Management Professional PMP®
+                    </p>
+                    <p className="mt-4 text-[13px] leading-relaxed text-foreground/75">
+                      Com sólida trajetória em Tecnologia da Informação, Energia, Infraestrutura e Transformação
+                      Organizacional, atuando na liderança de projetos complexos end-to-end, integração entre áreas
+                      técnicas e de negócio e governança de entregas em ambientes multistakeholder.
+                    </p>
+                    <p className="mt-3 text-[13px] leading-relaxed text-foreground/75">
+                      Com experiência internacional Brasil–Portugal, histórico em projetos institucionais, corporativos
+                      e industriais, forte capacidade de estruturação, tomada de decisão, coordenação de equipes
+                      multidisciplinares e relacionamento com stakeholders públicos e privados.
+                    </p>
+                    <p className="mt-3 text-[13px] leading-relaxed text-foreground/75">
+                      Em constante evolução profissional, cursa MBA em Gestão de Projetos pela Universidade de São
+                      Paulo, com formação em Gestão e Engenharia e base técnica robusta em TI, combinando visão
+                      estratégica, disciplina operacional e foco consistente em geração de valor sustentável.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
