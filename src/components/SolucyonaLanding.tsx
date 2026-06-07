@@ -783,9 +783,10 @@ function Clients() {
                     src={c.logo}
                     alt={c.name}
                     loading="lazy"
-                    style={{ width: pct, height: pct }}
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    style={c.cover ? undefined : { width: pct, height: pct }}
+                    className={`${c.cover ? "h-full w-full object-cover" : "object-contain"} transition-transform duration-300 group-hover:scale-105`}
                   />
+
                 </a>
                 <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
                   {c.name}
