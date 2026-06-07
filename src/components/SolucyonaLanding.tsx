@@ -934,8 +934,8 @@ function Contact() {
           <div className="mt-12 space-y-px border-t border-border">
             {[
               { icon: Phone, label: "WhatsApp", value: "+55 11 99439-3807", href: WHATSAPP_URL },
-              { icon: Mail, label: "E-mail", value: "contato@solucyona.com", href: "mailto:contato@solucyona.com" },
-              { icon: Linkedin, label: "LinkedIn", value: "solucyonasmartsolutions", href: "https://linkedin.com/showcase/solucyonasmartsolutions" },
+              { icon: Mail, label: "E-mail", value: "e-mail", href: "mailto:contato@solucyona.com" },
+              { icon: Linkedin, label: "LinkedIn", value: "linkedin", href: "https://linkedin.com/showcase/solucyonasmartsolutions" },
             ].map((c) => (
               <a
                 key={c.label}
