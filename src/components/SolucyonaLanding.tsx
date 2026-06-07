@@ -34,13 +34,13 @@ import helexiaLogo from "@/assets/clients/helexia.jpg.asset.json";
 import ikeaLogo from "@/assets/clients/ikea.jpg.asset.json";
 import minerthalLogo from "@/assets/clients/minerthal.png.asset.json";
 import pingoDoceLogo from "@/assets/clients/pingo_doce.png.asset.json";
-import poweronLogo from "@/assets/clients/poweron.png.asset.json";
 import regattaLogo from "@/assets/clients/regatta.png.asset.json";
 import santogalLogo from "@/assets/clients/santogal.jpeg.asset.json";
 import unicLogo from "@/assets/clients/universidade_de_cuiaba.png.asset.json";
 import metodistaLogo from "@/assets/clients/universidade_metodista_de_sao_paulo.jpg.asset.json";
-import zelosoLogo from "@/assets/clients/zeloso.jpg.asset.json";
 import grupo2svLogo from "@/assets/clients/grupo_2sv.jpg.asset.json";
+import redeGloboLogo from "@/assets/clients/rede_globo.svg.asset.json";
+import lxFactoryLogo from "@/assets/clients/lx_factory.png.asset.json";
 
 
 
