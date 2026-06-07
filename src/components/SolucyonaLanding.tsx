@@ -448,6 +448,54 @@ const specializations = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* Certifications                                                             */
+/* -------------------------------------------------------------------------- */
+
+function Certifications() {
+  const items = [
+    { src: pmpBadge.url, label: "PMP — Project Management Professional", rounded: false },
+    { src: pmiBadge.url, label: "Membro PMI — Project Management Institute", rounded: false },
+    { src: dgegBadge.url, label: "DGEG — Direção-Geral de Energia e Geologia · PT", rounded: true },
+    { src: creaSpBadge.url, label: "CREA-SP — Conselho Regional de Engenharia e Agronomia · BR", rounded: false },
+  ];
+  return (
+    <section id="certificacoes" className="border-b border-border bg-background py-28 lg:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <Eyebrow>03 / Certificações & Afiliações</Eyebrow>
+            <h2 className="mt-6 font-display text-4xl font-normal leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              Credenciais que <em>respaldam</em> nosso trabalho.
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-foreground/70 lg:col-span-4 lg:col-start-9">
+            Filiações e registros profissionais que garantem rigor técnico, ética e
+            conformidade regulatória nos projetos que entregamos.
+          </p>
+        </div>
+
+        <div className="mt-16 flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
+          {items.map((it) => (
+            <div key={it.label} className="flex flex-col items-center gap-3 max-w-[180px] text-center">
+              <img
+                src={it.src}
+                alt={it.label}
+                className={`h-24 w-24 object-contain ${it.rounded ? "rounded-full bg-white p-1" : ""}`}
+              />
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-foreground/60">
+                {it.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+
 function Services() {
   return (
     <section id="servicos" className="border-b border-border bg-background">
