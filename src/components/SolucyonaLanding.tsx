@@ -17,9 +17,12 @@ import {
   Plane,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import logoMark from "@/assets/solucyona-logo.png";
+import logoMarkAsset from "@/assets/solucyona-logo.png.asset.json";
 import pmpBadge from "@/assets/pmp-badge.png.asset.json";
 import pmiBadge from "@/assets/pmi-badge.png.asset.json";
+import dgegBadge from "@/assets/dgeg.jpeg.asset.json";
+import creaSpBadge from "@/assets/crea-sp.png.asset.json";
+const logoMark = logoMarkAsset.url;
 import amaroLogo from "@/assets/clients/amaro.jpeg.asset.json";
 import christieLogo from "@/assets/clients/christie.gif.asset.json";
 import albertSabinLogo from "@/assets/clients/colegio_albert_sabin.png.asset.json";
