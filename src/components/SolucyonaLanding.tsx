@@ -1110,6 +1110,7 @@ export default function SolucyonaLanding() {
         <Hero />
         <About />
         <Differentiators />
+        <Certifications />
         <Services />
         <Process />
         <Segments />
