@@ -728,7 +728,7 @@ function Segments() {
 /* Clients                                                                    */
 /* -------------------------------------------------------------------------- */
 
-const clients: { name: string; logo: string; bg: string; scale?: number; url: string }[] = [
+const clients: { name: string; logo: string; bg: string; scale?: number; url: string; cover?: boolean }[] = [
   { name: "Amaro", logo: amaroLogo.url, bg: "#000000", url: "https://amaro.com/" },
   { name: "Christie", logo: christieLogo.url, bg: "#ffffff", url: "https://www.christiedigital.com/" },
   { name: "Colégio Albert Sabin", logo: albertSabinLogo.url, bg: "#ffffff", url: "https://www.albertsabin.com.br/" },
