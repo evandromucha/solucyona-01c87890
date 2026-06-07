@@ -70,7 +70,7 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <a href="#inicio" className="group flex items-center gap-3" aria-label="Solucyona Smart Solutions">
-      <img src={logoMark} alt="" width={36} height={36} className="h-9 w-9 shrink-0" />
+      <img src={logoMark} alt="" width={72} height={72} className="h-[72px] w-[72px] shrink-0" />
       <span className="flex items-baseline gap-1.5">
         <span
           className={`font-display text-2xl font-normal tracking-tight font-mono ${
