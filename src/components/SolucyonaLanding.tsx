@@ -728,7 +728,7 @@ function Segments() {
 /* Clients                                                                    */
 /* -------------------------------------------------------------------------- */
 
-const clients: { name: string; logo: string; bg: string; scale?: number; url: string }[] = [
+const clients: { name: string; logo: string; bg: string; scale?: number; url: string; cover?: boolean }[] = [
   { name: "Amaro", logo: amaroLogo.url, bg: "#000000", url: "https://amaro.com/" },
   { name: "Christie", logo: christieLogo.url, bg: "#ffffff", url: "https://www.christiedigital.com/" },
   { name: "Colégio Albert Sabin", logo: albertSabinLogo.url, bg: "#ffffff", url: "https://www.albertsabin.com.br/" },
@@ -740,7 +740,7 @@ const clients: { name: string; logo: string; bg: string; scale?: number; url: st
   { name: "Helexia / Voltalia", logo: helexiaLogo.url, bg: "#ffffff", url: "https://helexia.pt" },
   { name: "IKEA", logo: ikeaLogo.url, bg: "#0058a3", url: "https://www.ikea.com/pt/pt/" },
   { name: "Minerthal", logo: minerthalLogo.url, bg: "#ffffff", scale: 0.7, url: "https://www.minerthal.com.br/" },
-  { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", url: "https://www.pingodoce.pt/" },
+  { name: "Pingo Doce", logo: pingoDoceLogo.url, bg: "#000000", cover: true, url: "https://www.pingodoce.pt/" },
   { name: "PowerOn", logo: poweronLogo.url, bg: "#ffffff", url: "https://www.poweron.pt/" },
   { name: "Regatta", logo: regattaLogo.url, bg: "#ffffff", url: "https://www.regatta.com.br/" },
   { name: "Santogal", logo: santogalLogo.url, bg: "#ffffff", url: "https://www.santogal.pt/pt/" },
@@ -783,9 +783,10 @@ function Clients() {
                     src={c.logo}
                     alt={c.name}
                     loading="lazy"
-                    style={{ width: pct, height: pct }}
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    style={c.cover ? undefined : { width: pct, height: pct }}
+                    className={`${c.cover ? "h-full w-full object-cover" : "object-contain"} transition-transform duration-300 group-hover:scale-105`}
                   />
+
                 </a>
                 <span className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/60">
                   {c.name}
@@ -1037,7 +1038,7 @@ function Footer() {
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">DGEG — Direção-Geral de Energia e Geologia · PT</span>
             </div>
             <div className="flex flex-col items-center gap-2 max-w-[160px] text-center">
-              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain" />
+              <img src={creaSpBadge.url} alt="CREA-SP — Conselho Regional de Engenharia e Agronomia de São Paulo" className="h-20 w-20 object-contain rounded-full bg-white p-2" />
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-foreground/60">CREA-SP — Conselho Regional de Engenharia e Agronomia · BR</span>
             </div>
           </div>
